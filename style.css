@@ -1,0 +1,44 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: azure;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to left, #A5FECB, #20BDFF, #5433FF)
+
+}
+
+#contenedor{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+#caja1, #caja2, #caja3 {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20%;
+    width: 200px;
+    height: 200px;
+}
+
+#caja1{
+    background: rgba(47, 44, 44, 0.767);
+}
+
+#caja2{
+    background: darkslateblue;
+}
+#caja3{
+    background: #2ab2ea;
+}
