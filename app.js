@@ -30,6 +30,30 @@ window.addEventListener("load", ()=>{
                     temperaturaDescripcion.textContent = desc.toUpperCase();
                     ubicacion.textContent = data.name;
                     vientoVelocidad.textContent = `${data.wind.speed} m/s`;
+
+                    switch(data.weather[0].main){
+                        case "Clear":
+                            iconoAnimado.src ="img/day.svg";
+                            break;
+                        case "Thunderstorm":
+                            iconoAnimado.src ="img/thunder.svg";
+                            break;
+                        case "Drizzle":
+                            iconoAnimado.src ="img/rainy-2.svg";
+                            break;
+                        case "Rain":
+                            iconoAnimado.src ="img/rainy-7.svg";
+                            break;
+                        case "Snow":
+                            iconoAnimado.src ="img/snowy-6.svg";
+                            break;
+                        case "Atmosphere":
+                            iconoAnimado.src ="img/weather.svg";
+                            break;
+                        case "Clouds":
+                            iconoAnimado.src ="img/cloudy-day-1.svg";
+                            break;
+                    }
                 })
                 .catch(error => {console.log(error)})
         })
