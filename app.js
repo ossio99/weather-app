@@ -22,10 +22,10 @@ window.addEventListener("load", ()=>{
             fetch(url)
                 .then(res => {return res.json()})
                 .then(data => {
-                    let temp = Math.round(data.main.temp);
+                    let temp = Math.round(data.main.temp - 273);
                     console.log(data);
                     console.log(temp);
-                    temperaturaValor.textContent = `${temp}?`;
+                    temperaturaValor.textContent = `${temp}°`;
                     let desc = data.weather[0].description;
                     temperaturaDescripcion.textContent = desc.toUpperCase();
                     ubicacion.textContent = data.name;
